@@ -1,0 +1,12 @@
+# Configurações do banco de dados
+database:
+  host: "localhost"
+  port: 3306
+  database: "homeplugin"
+  username: "root"
+  password: "senha"
+
+# Configurações do plugin
+cooldown: 60 # Tempo em segundos
+showParticles: true # Mostrar partículas ao teleportar
+max_homes: 5

@@ -1,0 +1,31 @@
+name: HomePlugin
+version: 1.0
+main: br.com.wuzuy.HomePlugin
+api-version: 1.21
+description: >
+  HomePlugin é um plugin para Minecraft que permite aos jogadores teleportarem
+  para suas casas com o comando /home e definir uma casa com o comando /sethome.
+  Inclui configurações de cooldown e partículas, e salva as casas em um banco de dados MySQL/MariaDB.
+authors:
+  - Lucas Matheus
+website: https://example.com
+
+commands:
+  home:
+    description: Teleporta o jogador para sua casa configurada.
+    usage: /<command>
+    permission: homeplugin.use
+    permission-message: Você não tem permissão para usar este comando.
+  sethome:
+    description: Define a localização da casa do jogador.
+    usage: /<command>
+    permission: homeplugin.sethome
+    permission-message: Você não tem permissão para usar este comando.
+
+permissions:
+  homeplugin.use:
+    description: Permissão para usar o comando /home.
+    default: true
+  homeplugin.sethome:
+    description: Permissão para usar o comando /sethome.
+    default: true

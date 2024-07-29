@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'br.com.wuzuy'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://hub.spigotmc.org/nexus/content/repositories/public/'
+    }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.21-R0.1-SNAPSHOT'
+    implementation 'mysql:mysql-connector-java:8.0.29'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'br.com.wuzuy.home.HomePlugin'
+        )
+    }
+}
+
+sourceCompatibility = '17'
+targetCompatibility = '17'
