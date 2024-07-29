@@ -17,16 +17,18 @@ Estrutura do Banco de Dados
 ## Tabela homes
 A tabela homes armazena as localizações de casa dos jogadores. Ela possui a seguinte estrutura:
 
-sql
+```sql
 Copiar código
 CREATE TABLE `homes` (
   `player_name` VARCHAR(255) NOT NULL,
   `location` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`player_name`)
 );
-
+```
+```
 player_name: Nome do jogador (chave primária).
 location: Localização da home no formato world:x:y:z.
+```
 
 ## Instalação
 
@@ -38,8 +40,7 @@ Reinicie o Servidor: Reinicie o servidor Minecraft para carregar o plugin.
 O plugin utiliza um banco de dados MySQL para armazenar as localizações das casas. Certifique-se de configurar o banco de dados no arquivo de configuração do plugin (config.yml).
 
 ## Exemplo de configuração:
-
-yaml
+```yaml
 Copiar código
 database:
   host: localhost
@@ -47,6 +48,7 @@ database:
   database: homeplugin
   username: root
   password: sua_senha
+```
 Uso
 Comando /sethome
 Descrição: Define a localização da casa do jogador.
